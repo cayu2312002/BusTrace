@@ -4,20 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user_menu">
+    tools:context=".user_menu"
+    android:background="@drawable/background">
     <include layout="@layout/my_toolbar"/>
+
     <TextView
         android:id="@+id/welcome_user"
-        android:layout_width="339dp"
-        android:layout_height="113dp"
+        android:layout_width="343dp"
+        android:layout_height="75dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="36dp"
-        android:fontFamily="@font/roboto_medium"
+        android:fontFamily="@font/carter_one"
         android:gravity="center"
         android:text="@string/welcome_user"
-        android:textColor="@color/black"
-        android:textSize="48sp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

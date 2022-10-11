@@ -62,9 +62,10 @@ class user_menu : AppCompatActivity() {
                     params.setMargins(0, 20, 0, 0)
                     button.layoutParams = params
                     button.width = 600
-                    button.height = 300
-                    button.setBackgroundColor(resources.getColor(R.color.purple_500))
-                    button.setTextColor(Color.WHITE)
+                    button.height = 100
+                    button.setBackgroundColor(resources.getColor(R.color.teal_200))
+                    button.setTextColor(Color.rgb(110, 22, 138))
+                    button.setTextSize(1,20F)
                     //Aqui debe ir el nombre de la ruta que se obtenga de la BD EJ: ruta.nombre
                     button.text = i.name
                     //se crea un metodo click para el boton que va a transferir hacia la actividad de mapa , se envia como parametro el id de la ruta (ruta.id)
