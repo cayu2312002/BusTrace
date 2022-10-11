@@ -69,8 +69,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_secondary"
-        android:text="LOGIN"
-        android:onClick="login"/>
+        android:onClick="login"
+        android:text="LOGIN" />
 
     <TextView
         android:id="@+id/fogottenPassword"
