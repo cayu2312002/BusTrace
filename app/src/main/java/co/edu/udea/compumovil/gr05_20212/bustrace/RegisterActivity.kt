@@ -39,7 +39,7 @@ class RegisterActivity : AppCompatActivity() {
         txtEmail=findViewById(R.id.getCorreo)
         txtPassword=findViewById(R.id.getConfirmPassword)
 
-        progressBar= findViewById(R.id.progressBar)
+
         database= FirebaseDatabase.getInstance()
         auth= FirebaseAuth.getInstance()
 
@@ -62,7 +62,7 @@ class RegisterActivity : AppCompatActivity() {
         val password:String=txtPassword.text.toString()
 
         if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && txtPassword.length()>=6){
-                progressBar.visibility=View.VISIBLE
+
 
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){
@@ -77,7 +77,6 @@ class RegisterActivity : AppCompatActivity() {
                         userBD?.child("Name")?.setValue(name)
                         userBD?.child("Last Name")?.setValue(lastName)
                         val toast = Toast.makeText(this, "Usuario registrado con éxito.", Toast.LENGTH_SHORT)
-                        toast.setGravity(Gravity.CENTER, 0, 0)
                         toast.show()
                         action()
                     }
@@ -97,13 +96,13 @@ class RegisterActivity : AppCompatActivity() {
                 txtPassword.setError("La contraseña no puede estar vacia.")
             }
             val toast = Toast.makeText(this, "Los campos no pueden estar vacios.", Toast.LENGTH_LONG)
-            toast.setGravity(Gravity.TOP, 0, 0)
+
             toast.show()
         }
         else{
             txtPassword.setError("La contraseña debe tener mas de 6 digitos.")
             val toast = Toast.makeText(this, "La contraseña debe tener 6 digitos.", Toast.LENGTH_LONG)
-            toast.setGravity(Gravity.TOP, 0, 0)
+
             toast.show()
         }
 

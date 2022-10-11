@@ -31,7 +31,7 @@ class ForgotPassActivity : AppCompatActivity() {
 
         txtEmail=findViewById(R.id.txtEmail)
         auth= FirebaseAuth.getInstance()
-        progressBar= findViewById(R.id.progressBar)
+
 
     }
 
@@ -48,7 +48,6 @@ class ForgotPassActivity : AppCompatActivity() {
                 .addOnCompleteListener(this){
                     task->
                     if(task.isSuccessful){
-                        progressBar.visibility=View.VISIBLE
                         val toast = Toast.makeText(this, "Email de recuperación enviado con éxito. Por favor reestablezca la contraseña en su correo.", Toast.LENGTH_SHORT)
                         toast.setGravity(Gravity.CENTER, 0, 0)
                         toast.show()
@@ -65,5 +64,9 @@ class ForgotPassActivity : AppCompatActivity() {
             toast.setGravity(Gravity.TOP, 0, 0)
             toast.show()
         }
+    }
+
+    fun iniciarSesion(view:View){
+        startActivity(Intent(this, LoginActivity::class.java))
     }
 }

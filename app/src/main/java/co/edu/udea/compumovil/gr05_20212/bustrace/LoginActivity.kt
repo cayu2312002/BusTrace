@@ -33,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
 
         txtUser=findViewById(R.id.email)
         txtPassword=findViewById(R.id.password)
-        progressBar= findViewById(R.id.progressBar)
         auth= FirebaseAuth.getInstance()
 
         var consultas = Consultas()
@@ -76,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         val password:String=txtPassword.text.toString()
 
         if (!TextUtils.isEmpty(user) && !TextUtils.isEmpty(password)){
-            progressBar.visibility=View.VISIBLE
+
             auth.signInWithEmailAndPassword(user, password)
                 .addOnCompleteListener(this){
                     task->
