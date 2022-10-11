@@ -112,6 +112,7 @@ class user_menu : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId==R.id.logout) {
+            FirebaseAuth.getInstance().signOut()
             user.signOut()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()

@@ -19,4 +19,6 @@
     <string name="btn_rute2">Ruta 2</string>
     <string name="btn_rute3">Ruta 3</string>
     <string name="btn_rute4">Ruta 4</string>
+    <string name="bustrace_login">BusTrace - Login</string>
+    <string name="ingresa_con_google">Ingresa con Google</string>
 </resources>
